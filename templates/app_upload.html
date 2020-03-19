@@ -1,0 +1,20 @@
+{% extends "nav.html" %}
+{% block content %}
+
+<div class='upload'>
+  <h1> Upload a csv of Loan Application Data and loan performance data </h1>
+  <form id='form' enctype='multipart/form-data' action='/appUpdate' method='POST'>
+    <p> Upload appraisal data </p>
+    <input type="file" name="fileupload" value="fileupload" id="fileupload">
+    <br/>
+    <p> Upload application data </p>
+    <input type="file" name="fileupload1" value="fileupload1" id="fileupload1">
+    <br/>
+    <p> Upload loan performance data </p>
+    <input type="file" name="fileupload2" value="fileupload2" id="fileupload2">
+    <br/>
+    <br/>
+  <input type='submit'>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "nav.html" %}
+{% block content %}
+
+<div class='upload'>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <h1> Upload a csv of values for the applicant you want to get the risk score for </h1>
+  <form id='form' enctype='multipart/form-data' action='/computeRisk' method='POST'>
+    <input type="file" name="fileupload" value="fileupload" id="fileupload">
+    <label for="fileupload"> Select a file to upload</label>
+
+  <input type='submit'>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% block content %}
+
+<div class='upload'>
+  <h1> Upload the CSV to append to the already existing data </h1>
+  <form id='form' enctype='multipart/form-data' action='/npaUpdate' method='POST'>
+    <input type="file" name="fileupload" value="fileupload" id="fileupload">
+    <label for="fileupload"> Select a file to upload</label>
+  <input type='submit'>
+  </form>
+</div>
+{% endblock %}

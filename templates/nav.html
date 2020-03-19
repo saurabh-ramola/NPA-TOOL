@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Loan DEFAULT Risk Tool</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="/appUpload">Upload The Files</a></li>
+            <li><a href="/npaUpload">Upload Quarterly Data</a></li>
+              <li><a href="/getRisk">Get Risk score of Loan Applicants</a></li>
+
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+        <p>Number of entries in Loan_performance file: {{ loan_file }}</p>
+
+  {% block content %}
+  {% endblock %}
+</div>
+  </body>
+</html>
